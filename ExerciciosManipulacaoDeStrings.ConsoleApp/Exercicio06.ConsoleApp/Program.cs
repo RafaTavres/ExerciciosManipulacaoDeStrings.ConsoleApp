@@ -64,7 +64,7 @@ namespace Exercicio06.ConsoleApp
 
         private static string MenuInicial()
         {
-            Console.WriteLine("1- Pesquisar por Estado/Cidade ||  2-  Pesquisar por Letra Inicaial da Cidade");
+            Console.WriteLine("1- Pesquisar por Estado/Cidade ||  2-  Pesquisar por Letra Inicial da Cidade");
             string resposta = Console.ReadLine();
             return resposta;
         }
