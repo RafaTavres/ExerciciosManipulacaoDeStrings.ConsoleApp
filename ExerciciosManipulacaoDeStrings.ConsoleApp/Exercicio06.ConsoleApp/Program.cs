@@ -7,7 +7,7 @@ namespace Exercicio06.ConsoleApp
 
         //Desenvolva um programa em C# que leia o arquivo cidades.csv e dê a possibilidade de apresentar as cidades
         //agrupadas pela primeira letra ou pelo estado que pertence.
-        static string todosMunicipios = File.ReadAllText(@"C:\Users\Rafael\Downloads\Cidades.csv");
+        static string todosMunicipios = File.ReadAllText(@"C:\Users\Rafael\Desktop\Trabalhos da AdP\ExerciciosManipulacaoDeStrings\Cidades.csv");
         static string[] municipiosCompletos = todosMunicipios.Split('\n');
         static string[] cidades = todosMunicipios.Split(';');
         static string palavradigitada;
