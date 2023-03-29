@@ -87,6 +87,7 @@ namespace Exercicio06.ConsoleApp
 
                 }
             }
+            Console.WriteLine("_________________________________");
             Console.ReadLine();
         }
 
@@ -113,6 +114,7 @@ namespace Exercicio06.ConsoleApp
                 }
 
             }
+            Console.WriteLine("_________________________________");
             Console.ReadLine();
         }
     }
