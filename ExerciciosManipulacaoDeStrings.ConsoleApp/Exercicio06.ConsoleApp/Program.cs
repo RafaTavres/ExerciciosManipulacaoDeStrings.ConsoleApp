@@ -26,7 +26,7 @@ namespace Exercicio06.ConsoleApp
                     if (VerificaSeEhNumero())
                         continue;
 
-                    PesquisaMunicipiorPorNome(municipiosCompletos, palavradigitada);
+                    PesquisaMunicipiorPorNome(municipiosCompletos, cidades);
                 }
                 if (opcao == "2")
                 {
@@ -76,15 +76,9 @@ namespace Exercicio06.ConsoleApp
 
                 if (cidades[i].StartsWith(palavradigitada, StringComparison.OrdinalIgnoreCase))
                 {
-                    for (int j = 0; j < municipiosCompletos.Length; j++)
-                    {
-                        string cidadeFormatada = ";" + cidades[i] + ";";
-                        if (municipiosCompletos[j].Contains(cidadeFormatada))
-                        {
-                            Console.WriteLine(municipiosCompletos[j]);
-                        }
-                    }
 
+                        Console.WriteLine(cidades[i]);
+ 
                 }
             }
             Console.WriteLine("_________________________________");
@@ -104,13 +98,26 @@ namespace Exercicio06.ConsoleApp
             Console.WriteLine(mensagem);
         }
 
-        private static void PesquisaMunicipiorPorNome(string[] municipiosCompletos, string palavradigitada)
+        private static void PesquisaMunicipiorPorNome(string[] municipiosCompletos, string[] cidades)
         {
-            for (int i = 0; i < municipiosCompletos.Length; i++)
+            for (int i = 0; i < cidades.Length; i++)
             {
-                if (municipiosCompletos[i].Contains(palavradigitada, StringComparison.OrdinalIgnoreCase))
+                if (cidades[i].StartsWith(palavradigitada, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine(municipiosCompletos[i]);
+                    
+                    for (int j = 0; j < municipiosCompletos.Length; j++)
+                    {
+                        if (cidades[i]  == ";"+ cidades[i])
+                        {
+                            Console.WriteLine("1");
+
+                        }else
+                        if (municipiosCompletos[j].Contains(cidades[i], StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine(municipiosCompletos[j]);
+
+                        }
+                    }
                 }
 
             }
